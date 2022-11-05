@@ -32,3 +32,13 @@ namespace :db do
     require_relative './db/seeds'
   end
 end
+
+
+#we've already run rake db:migrate to create the database table i.e migrate 
+#we've already inserted 5 records in the database record  i.e sseeding 
+
+#Building a Rake task that will help us load Pry console for us 
+desc 'drop into the Pry console'
+task console: :environment do
+  Pry.start
+end
